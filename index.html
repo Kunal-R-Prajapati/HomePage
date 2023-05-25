@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class=" backdrop-grayscale-[50%] h-screen bg-scroll flex justify-center items-center transition-all ease-in-out transform-cpu ">
+    <section class="flex flex-col gap-4 p-4 justify-center items-center w-fit h-fit rounded-lg bg-slate-400 bg-opacity-40 backdrop-blur-0">
+
+        <div class="logo transition-all ease-in-out transform-gpu " >
+            <img src="./img/background1.jpg" class="rounded-full transition-all ease-in-out transform-gpu  cursor-pointer w-36 h-36 md:w-44 md:h-44 border-4 shadow-slate-500 shadow-md hover:scale-105 hover:rotate-[360deg] hover:shadow-sm hover:shadow-slate-400 " alt="" onclick="changeBackground()">
+        </div>
+        <div class="flex transition-all bg-slate-400 rounded-lg overflow-hidden shadow-black shadow-xl w-fit gap-0">
+            <div id="searchEngine" class="w-fit ">
+                <button id="dropdownButton" onclick="toggleList()" class="hover:bg-slate-600 rounded-l-lg text-lg flex flex-row  items-center p-1 gap-1 w-fit md:text-xl md:h-full">
+                    <img src="./img/icons8-google.svg" class="w-6 md:w-7" alt="" srcset="">
+                    Google
+                    <img src="./img/icons8-down-16.png" class="w-2 md:w-3" alt="" srcset="">
+                </button>
+
+                <div id="dropdownList" class="hidden absolute mt-1 bg-slate-400 rounded-xl">
+                    <ul>
+                        <li><button data-engine="Google" data-url="https://www.google.com/search?q="
+                                class="w-full p-1 text-left text-lg hover:bg-slate-600 hover:rounded-t-xl"><img
+                                    class="w-6 inline-block mr-1" src="./img/icons8-Google.svg" alt="">Google</button>
+                        </li>
+                        <li><button data-engine="Bing" data-url="https://www.bing.com/search?q=" class="w-full p-1 text-left text-lg hover:bg-slate-600"><img
+                                    class="w-6 inline-block mr-1" src="./img/icons8-Bing.svg" alt="">Bing</button></li>
+                        <li><button data-engine="DuckDuckGo" data-url="https://duckduckgo.com/?q="
+                                class="w-full p-1 text-left text-lg hover:bg-slate-600"><img
+                                    class="w-6 inline-block mr-1" src="./img/icons8-DuckDuckGo.svg"
+                                    alt="">DuckDuckGo</button></li>
+                        <li><button data-engine="Youtube" data-url="https://www.youtube.com/results?search_query=" class="w-full p-1 text-left text-lg hover:bg-slate-600"><img
+                                    class="w-6 inline-block mr-1" src="./img/icons8-YouTube.svg" alt="">Youtube</button>
+                        </li>
+                        <li><button data-engine="Yandex" data-url="https://yandex.com/search/?text="
+                                class="w-full p-1 text-left text-lg hover:bg-slate-600 hover:rounded-b-xl"><img
+                                    class="w-6 inline-block mr-1" src="./img/icons8-Yandex.svg" alt="">Yandex</button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div  class="w-40 md:w-80">
+                <input id="searchText" type="text" class=" text-lg p-1 outline-none h-full w-full">
+            </div>
+            <div id="searchButton" class="p-1 cursor-pointer  rounded-r-lg hover:bg-slate-600 ">
+                <img class="mix-blend-multiply w-7 md:w-8" src="./img/icons8-search.gif" alt="" srcset="">
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
